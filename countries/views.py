@@ -18,6 +18,8 @@ def country_list(request):
 
 @api_view(["GET"])
 def country(request, common_name):
-    queryset = Country.objects.get(common_name=common_name)
-    serializer = CountrySerializer(queryset)
+    queryset = Country.objects.filter(common_name__icontains=common_name)
+    if not queryset.exists():
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    serializer = CountrySerializer(queryset.first())
     return Response(serializer.data, status=status.HTTP_200_OK)
