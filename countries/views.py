@@ -14,3 +14,10 @@ def country_list(request):
         queryset = filterset.qs
     serializer = CountrySerializer(queryset, many=True)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(["GET"])
+def country(request, common_name):
+    queryset = Country.objects.get(common_name=common_name)
+    serializer = CountrySerializer(queryset)
+    return Response(serializer.data, status=status.HTTP_200_OK)
