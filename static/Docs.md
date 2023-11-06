@@ -25,10 +25,10 @@ To retrieve data for all countries, you can use the following link:
 | ccn3 | ?ccn3__iexact={value} |
 | cca3 | ?cca3__iexact={value} |
 | cioc | ?cioc__iexact={value} |
-| currencies__name | ?currencies__name__iexact={value} |
-| currencies__name | ?currencies__name__icontains={value} |
-| currencies__code | ?currencies__code__iexact={value} |
-| currencies__code | ?currencies__code__icontains={value} |
+| currencies__name | `?currencies__name__iexact={value}` |
+| currencies__name | `?currencies__name__icontains={value}` |
+| currencies__code | `?currencies__code__iexact={value}`|
+| currencies__code | `?currencies__code__icontains={value}` |
 
 ### Example
 `http://localhost:8000/api/v1/countries/all?common_name__icontains={value}`
