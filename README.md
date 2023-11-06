@@ -23,15 +23,15 @@ pip install -r requirements.txt
 ```
 ### Step 4: Set Up the Database
 ```
-python manage.py migrate
+./manage.py migrate
 ```
 ### Step 5: Populate `Country` and `Currency` Tables
 Use custom management commands to populate the `Country` and `Currency` tables.
 
 Note: Run `insert_currencies` first, as the `Country` table needs `Currency` data since the `currency` field in the `Country` table is a `many-to-many` relation.
 ```
-python manage.py insert_currencies
-python manage.py insert_countries
+./manage.py insert_currencies
+./manage.py insert_countries
 ```
 ### Step 6: Start the Django Server
 ```
