@@ -12,4 +12,6 @@ class CountriesFilters(filters.FilterSet):
             "ccn3": ["iexact"],
             "cca3": ["iexact"],
             "cioc": ["iexact"],
+            "currencies__name": ["iexact", "icontains"],
+            "currencies__code": ["iexact", "icontains"],
         }
