@@ -5,7 +5,7 @@ Get information on any country, from population and languages to currencies and 
 This open-source project draws inspiration from restcountries.eu and restcountries.com. While the original project has transitioned to a subscription-based API, and the second project lacks a robust filtering or structured means of querying country data, I am actively addressing these issues with the aim of enhancing the accessibility and usability of this project.
 
 # COUNTRY DATA  
-You can access the API via `https://countrydatahub.com/api/v1/{endpoint}`
+You can access the API via https://countrydatahub.com/api/v1/countries/all
 
 # ENDPOINTS
 

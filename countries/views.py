@@ -20,6 +20,6 @@ def country_list(request):
 def country(request, common_name):
     queryset = Country.objects.filter(common_name__icontains=common_name)
     if not queryset.exists():
-        return Response(status=status.HTTP_404_NOT_FOUND)
+        return Response({"message": "Not found"}, status=status.HTTP_404_NOT_FOUND)
     serializer = CountrySerializer(queryset.first())
     return Response(serializer.data, status=status.HTTP_200_OK)
