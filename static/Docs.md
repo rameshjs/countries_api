@@ -5,13 +5,13 @@ Get information on any country, from population and languages to currencies and 
 This open-source project draws inspiration from restcountries.eu and restcountries.com. While the original project has transitioned to a subscription-based API, and the second project lacks a robust filtering or structured means of querying country data, I am actively addressing these issues with the aim of enhancing the accessibility and usability of this project.
 
 # COUNTRY DATA  
-You can access the API via `http://localhost:8000/api/v1/{endpoint}`
+You can access the API via `https://countrydatahub.com/api/v1/{endpoint}`
 
 # ENDPOINTS
 
 ## ALL COUNTRIES DATA
 To retrieve data for all countries, you can use the following link: 
-`http://localhost:8000/api/v1/countries/all`
+`https://countrydatahub.com/api/v1/countries/all`
 
 ## FILTER COUNTRY DATA
 
@@ -31,7 +31,7 @@ To retrieve data for all countries, you can use the following link:
 | currencies__code | `?currencies__code__icontains={value}` |
 
 ### Example
-`http://localhost:8000/api/v1/countries/all?common_name__icontains={value}`
+`https://countrydatahub.com/api/v1/countries/all?common_name__icontains={value}`
 
 
 
